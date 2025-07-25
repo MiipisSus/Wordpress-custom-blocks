@@ -7,6 +7,26 @@ export default function Edit({
 	attributes: { featuredTopicCount },
 	setAttributes,
 }) {
+	function getChineseNumber(num) {
+		const map = [
+			"零",
+			"一",
+			"二",
+			"三",
+			"四",
+			"五",
+			"六",
+			"七",
+			"八",
+			"九",
+			"十",
+		];
+		if (num >= 1 && num <= 10) {
+			return map[num];
+		}
+		return num;
+	}
+
 	return (
 		<>
 			<InspectorControls>
@@ -23,8 +43,15 @@ export default function Edit({
 				</PanelBody>
 			</InspectorControls>
 			<div {...useBlockProps()}>
-				<p>{__("精選主題資訊：", "featured-topic-block")}</p>
-				<p>{featuredTopicCount}</p>
+				<h1>{getChineseNumber(featuredTopicCount)}大看點</h1>
+				<ul className="featured-topic-list">
+					{Array.from({ length: featuredTopicCount }).map((_, i) => (
+						<li className="featured-topic-item" key={i}>
+							<span className="topic-index">{i + 1}</span>
+							<span className="topic-title">主題標題 {i + 1}</span>
+						</li>
+					))}
+				</ul>
 			</div>
 		</>
 	);
