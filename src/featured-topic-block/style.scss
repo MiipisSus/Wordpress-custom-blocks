@@ -6,7 +6,48 @@
  */
 
 .wp-block-create-block-featured-topic-block {
-	background-color: #21759b;
+	padding: 0.5rem 1rem;
+
+	background-color: #e6e6e6;
+
+	font-family: "Noto Sans TC", "Microsoft JhengHei", "PingFang TC", "Heiti TC",
+		"sans-serif";
+	color: #000000;
+}
+
+.wp-block-create-block-featured-topic-block h1 {
+	font-size: 1.5em;
+	font-weight: bold;
+	line-height: 1.2;
+}
+
+.wp-block-create-block-featured-topic-block ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+.featured-topic-item {
+	display: flex;
+	align-items: center;
+	margin-bottom: 0.5em;
+	gap: 0.5em;
+}
+
+.featured-topic-item .topic-index {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 3rem;
+	height: 3rem;
+
+	background-color: #7db9d5;
 	color: #fff;
-	padding: 2px;
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.featured-topic-item .topic-title {
+	flex: 1;
+	font-size: 1rem;
 }
