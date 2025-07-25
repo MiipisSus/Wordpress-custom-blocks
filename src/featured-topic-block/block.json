@@ -1,0 +1,28 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "create-block/featured-topic-block",
+	"version": "0.1.0",
+	"title": "Featured Topic Block",
+	"category": "widgets",
+	"icon": "smiley",
+	"description": "Example block scaffolded with Create Block tool.",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "featured-topic-block",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php",
+	"viewScript": "file:./view.js",
+	"usesContext": ["postId", "postType"],
+	"attributes": {
+		"featuredTopicCount": {
+			"type": "integer",
+			"default": 5,
+			"description": "文章主題"
+		}
+	}
+}
