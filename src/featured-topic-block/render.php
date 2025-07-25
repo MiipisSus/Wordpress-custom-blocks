@@ -8,6 +8,7 @@ if ( is_array( $response ) && ! is_wp_error( $response ) ) {
 }
 
 $feature_topic_count = isset( $attributes['featuredTopicCount'] ) ? intval( $attributes['featuredTopicCount'] ) : 5;
+$feature_topic_marker_base_color = get_option( 'feature_topic_marker_base_color', '#21759b' );
 
 // 只取前 $feature_topic_count 筆資料
 $display_data = array_slice( $data, 0, $feature_topic_count );
@@ -27,7 +28,9 @@ if ( ! function_exists( 'get_chinese_number' ) ) {
 	<ul class="featured-topic-list">
 		<?php $i = 1; foreach ( $display_data as $item ) : ?>
 			<div class="featured-topic-item">
-				<div class="topic-index"><?php echo $i; ?></div>
+				<div class="topic-index"
+				style="background-color: <?php echo esc_attr( $feature_topic_marker_base_color ); ?>;"
+				><?php echo $i; ?></div>
 				<div class="topic-title"><?php echo esc_html( $item['title'] ); ?></div>
 			</div>
 		<?php $i++; endforeach; ?>
