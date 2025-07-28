@@ -19,7 +19,8 @@
 		"inc",
 		"src",
 		"languages",
-		"custom-blocks.php"
+		"custom-blocks.php",
+		"plugin-update-checker"
 	],
 	"devDependencies": {
 		"@wordpress/scripts": "^30.20.0"
