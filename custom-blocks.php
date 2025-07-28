@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       Custom Blocks
  * Description:       這是一個測試用的插件包，裡面只有一個區塊插件『精選主題』。
- * Version:           1.0.2
+ * Version:           1.0.3
  * Requires at least: 6.7
  * Requires PHP:      7.4
  * Author:            The WordPress Contributors
