@@ -1,0 +1,55 @@
+/*!************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/featured-topic-block/style.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-create-block-featured-topic-block {
+  padding: 0.5rem 1rem;
+  background-color: #e6e6e6;
+  font-family: "Noto Sans TC", "Microsoft JhengHei", "PingFang TC", "Heiti TC", "sans-serif";
+  color: #000000;
+}
+
+.wp-block-create-block-featured-topic-block h1 {
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.wp-block-create-block-featured-topic-block ul {
+  list-style: none;
+  padding-right: 0;
+}
+
+.featured-topic-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5em;
+  gap: 0.5em;
+}
+
+.featured-topic-item .topic-index {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.featured-topic-item .topic-title {
+  text-decoration: none;
+  color: inherit;
+  flex: 1;
+  font-size: 1rem;
+}
+
+.featured-topic-item .topic-title:hover {
+  color: #6d6d6d;
+}
