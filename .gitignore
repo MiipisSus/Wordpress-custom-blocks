@@ -34,3 +34,6 @@ node_modules/
 
 # vscode settings
 .vscode/
+
+# DS_Store files
+.DS_Store
