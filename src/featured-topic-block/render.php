@@ -40,7 +40,9 @@ if ( ! function_exists( 'get_chinese_number' ) ) {
                 <div class="topic-index"
                     style="background-color: <?php echo esc_attr( $bg_color ); ?>;"
                 ><?php echo $i; ?></div>
-                <div class="topic-title"><?php echo esc_html( $item['title'] ); ?></div>
+				<a class="topic-title" href="<?php echo esc_url( $item['href'] ); ?>" target="_blank" rel="noopener">
+					<?php echo esc_html( $item['title'] ); ?>
+				</a>
             </div>
         <?php $i++; endforeach; ?>
     </ul>

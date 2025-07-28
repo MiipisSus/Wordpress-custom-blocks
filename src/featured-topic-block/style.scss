@@ -48,6 +48,13 @@
 }
 
 .featured-topic-item .topic-title {
+	text-decoration: none;
+	color: inherit;
+
 	flex: 1;
 	font-size: 1rem;
+}
+
+.featured-topic-item .topic-title:hover {
+	color: #6d6d6d;
 }
