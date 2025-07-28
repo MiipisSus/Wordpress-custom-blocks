@@ -13,6 +13,16 @@
  * @package CreateBlock
  */
 
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+
+require 'plugin-update-checker/plugin-update-checker.php';
+
+$updateChecker = PucFactory::buildUpdateChecker(
+	'https://github.com/MiipisSus/Wordpress-custom-blocks',
+	__FILE__,
+	'custom-blocks'
+);
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
