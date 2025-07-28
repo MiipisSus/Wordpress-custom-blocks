@@ -9,6 +9,9 @@ if ( is_array( $response ) && ! is_wp_error( $response ) ) {
 
 $feature_topic_count = isset( $attributes['featuredTopicCount'] ) ? intval( $attributes['featuredTopicCount'] ) : 5;
 $feature_topic_marker_base_color = get_option( 'feature_topic_marker_base_color', '#21759b' );
+$feature_topic_marker_color_1 = get_option( 'feature_topic_marker_color_1', '#e74c3c' );
+$feature_topic_marker_color_2 = get_option( 'feature_topic_marker_color_2', '#f39c12' );
+$feature_topic_marker_color_3 = get_option( 'feature_topic_marker_color_3', '#27ae60' );
 
 // 只取前 $feature_topic_count 筆資料
 $display_data = array_slice( $data, 0, $feature_topic_count );
@@ -24,15 +27,21 @@ if ( ! function_exists( 'get_chinese_number' ) ) {
 }
 ?>
 <div <?php echo get_block_wrapper_attributes(); ?>>
-	<h1><?php echo get_chinese_number($feature_topic_count); ?>大看點</h1>
-	<ul class="featured-topic-list">
-		<?php $i = 1; foreach ( $display_data as $item ) : ?>
-			<div class="featured-topic-item">
-				<div class="topic-index"
-				style="background-color: <?php echo esc_attr( $feature_topic_marker_base_color ); ?>;"
-				><?php echo $i; ?></div>
-				<div class="topic-title"><?php echo esc_html( $item['title'] ); ?></div>
-			</div>
-		<?php $i++; endforeach; ?>
-	</ul>
+    <h1><?php echo get_chinese_number($feature_topic_count); ?>大看點</h1>
+    <ul class="featured-topic-list">
+        <?php $i = 1; foreach ( $display_data as $item ) :
+            $bg_color = '';
+            if ($i === 1) $bg_color = $feature_topic_marker_color_1;
+            elseif ($i === 2) $bg_color = $feature_topic_marker_color_2;
+            elseif ($i === 3) $bg_color = $feature_topic_marker_color_3;
+            else $bg_color = $feature_topic_marker_base_color;
+        ?>
+            <div class="featured-topic-item">
+                <div class="topic-index"
+                    style="background-color: <?php echo esc_attr( $bg_color ); ?>;"
+                ><?php echo $i; ?></div>
+                <div class="topic-title"><?php echo esc_html( $item['title'] ); ?></div>
+            </div>
+        <?php $i++; endforeach; ?>
+    </ul>
 </div>
