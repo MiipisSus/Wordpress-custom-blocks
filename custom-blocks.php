@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name:       Custom Blocks
- * Description:       Example block scaffolded with Create Block tool.
- * Version:           0.1.0
+ * Description:       這是一個測試用的插件包，裡面只有一個區塊插件『精選主題』。
+ * Version:           1.0.0
  * Requires at least: 6.7
  * Requires PHP:      7.4
  * Author:            The WordPress Contributors
